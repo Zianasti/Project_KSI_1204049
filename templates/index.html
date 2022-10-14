@@ -1,12 +1,45 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
     <head> 
         <meta charset="UTF-8">
         <meta http-equip="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Home</title>
+        <!--CSS-->
+        <link rel="stylesheet" href ="{% static 'css/style.css'%}">
+        <!--CSS BOOTSTRAP-->
+        <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
     </head>
     <body>
-        <h2>Buku Tutorial Django Python</h2>
+        {% include "snippets/navbar.html"%}
+
+        {%block header%}
+        <h2 class="display-4">Heading Extends</h2>
+        <p class="lead">Subheading Extends</p>
+        {% endblock header %}
+        <h2 align="center">Buku Tutorial Django Python</h2>
+        <div id="menu">
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            </ul>
+        </div>
+        
+
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, Zian Asti!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div
+
+
+        <!-- JS BOOTSTRAP-->
+        <script src="{% static 'vendor/bootsrap/bootstrap.js'%}" type="text/javascript"></script>
+        <script src="{% static 'vendor/bootsrap/jquery.slim.min.js'%}" type="text/javascript"></script>
+        <script src="{% static 'vendor/bootsrap/popper.min.js'%}" type="text/javascript"></script>
     </body>
 </html>

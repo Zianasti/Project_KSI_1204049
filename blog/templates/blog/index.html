@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Blog</title>
+    <!--CSS-->
+    <link rel="stylesheet" href ="{% static 'css/style.css'%}">
+    <!--CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+</head>
+<body> 
+    <h2 align="center">Halaman Blog</h2>
+    <div id="menu">
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        </ul> 
+    </div>
+    <img id="banner" src="{% static 'blog/img/sunflowers.jpg'%}" alt="">
+
+    <div class="card">
+        <div class="card-header">
+          Quote
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+
+
+    <!-- JS BOOTSTRAP-->
+    <script src="{% static 'vendor/bootsrap/bootstrap.js'%}" type="text/javascript"></script>
+    <script src="{% static 'vendor/bootsrap/jquery.slim.min.js'%}" type="text/javascript"></script>
+    <script src="{% static 'vendor/bootsrap/popper.min.js'%}" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+#banner{
+    width: 100%;
+    float: left;
+}
+
+#menu ul{
+    list-style-type: none;
+    overflow: hiddden;
+    margin: 0;
+}
+
+#menu ul li{
+    float: left;
+}
+
+#menu ul li a{
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#menu ul li a:hover{
+    color: pink;
+}
