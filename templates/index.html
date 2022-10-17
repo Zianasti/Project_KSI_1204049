@@ -8,12 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <!--CSS-->
-        <link rel="stylesheet" href ="{% static 'css/style.css'%}">
+        <link rel="stylesheet" href ="{% static 'css/mystyle.css'%}">
         <!--CSS BOOTSTRAP-->
         <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
     </head>
     <body>
-        {% include "snippets/navbar.html"%}
+        <h1 id ="h1_pertama">Hi, This's new project by 1204049_Zian Asti Dwiyanti</h1>
+        <h1 id="h1_kedua">This is a picture of Django</h1>
+        <h2 id="h2">Django was created in the fall of 2003</h2>
+        <h3 id="h3">Django is a lighweight and standalone web server for development and testing</h3>
+
+        <a href="https://www.djangoproject.com/">Now Less Roll!</a>
+        <img id="banner" src="{% static 'blog/img/sunflowers.jpg'%}" alt="">
+        
+        <!-- {% include "snippets/navbar.html"%}
 
         {%block header%}
         <h2 class="display-4">Heading Extends</h2>
@@ -25,16 +33,16 @@
             <li><a href="/">Home</a></li>
             <li><a href="/blog/">Blog</a></li>
             </ul>
-        </div>
+        </div> -->
         
 
-        <div class="jumbotron">
+        <!-- <div class="jumbotron">
             <h1 class="display-4">Hello, Zian Asti!</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
             <hr class="my-4">
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </div
+        </div -->
 
 
         <!-- JS BOOTSTRAP-->

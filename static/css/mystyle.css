@@ -1,0 +1,18 @@
+#h1_pertama{
+color: red;
+}
+
+#h1_kedua {
+    color: green;
+}
+#h2{
+    color: purple;
+}
+#h3{
+    color: aquamarine;
+}
+#banner {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
