@@ -13,15 +13,7 @@
         <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
     </head>
     <body>
-        <h1 id ="h1_pertama">Hi, This's new project by 1204049_Zian Asti Dwiyanti</h1>
-        <h1 id="h1_kedua">This is a picture of Django</h1>
-        <h2 id="h2">Django was created in the fall of 2003</h2>
-        <h3 id="h3">Django is a lighweight and standalone web server for development and testing</h3>
-
-        <a href="https://www.djangoproject.com/">Now Less Roll!</a>
-        <img id="banner" src="{% static 'blog/img/sunflowers.jpg'%}" alt="">
-        
-        <!-- {% include "snippets/navbar.html"%}
+        {% include "snippets/navbar.html"%}
 
         {%block header%}
         <h2 class="display-4">Heading Extends</h2>
@@ -30,10 +22,19 @@
         <h2 align="center">Buku Tutorial Django Python</h2>
         <div id="menu">
             <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="{%url "index" %}" title="" >Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{%url "blog:index" %}" title="" >Blog</a></li>
             </ul>
-        </div> -->
+        </div>
+        <h1 id ="h1_pertama">Hi, This's new project by 1204049_Zian Asti Dwiyanti</h1>
+        <h1 id="h1_kedua">This is a picture of Django</h1>
+        <h2 id="h2">Django was created in the fall of 2003</h2>
+        <h3 id="h3">Django is a lighweight and standalone web server for development and testing</h3>
+
+        <a href="https://www.djangoproject.com/">Now Less Roll!</a>
+        <img id="banner" src="{% static 'blog/img/sunflowers.jpg'%}" alt="">
+        
+        
         
 
         <!-- <div class="jumbotron">

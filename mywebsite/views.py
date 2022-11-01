@@ -6,3 +6,8 @@ def index(request):
 
 def about(request):
     return HttpResponse("About")
+
+def articles(request,year) :
+    year=year
+    str=year
+    return HttpResponse(year)

@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
+from django.urls import path,re_path
 
 from . import views
 
@@ -25,7 +26,8 @@ def index (request) :
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls')),
-    path ('', views.index),
+    path('blog/', include('blog.urls', namespace='blog')),
+    path ('', views.index, name='index'),
     path('about/',views.about),
+    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.articles, name='dinamis'),
 ]

@@ -17,3 +17,5 @@ def index(request):
 def recent(request):
     return HttpResponse("Recent")
 
+
+
