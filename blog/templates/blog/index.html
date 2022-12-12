@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
@@ -8,14 +9,31 @@
     <!--CSS BOOTSTRAP-->
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
 </head>
-<body> 
-    <h2 align="center">Halaman Blog</h2>
-    <div id="menu">
+<body>
+  <div id="menu">
         <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/blog/">Blog</a></li>
+        <li><a href="/form/">Form</a></li>
         </ul> 
-    </div>
+    </div> 
+    <br>
+    <br>
+    <h2 align="center">Halaman Blog</h2>
+      {% block page_title %}
+          {{page_title}}
+      {% endblock page_title %}
+
+      {% block contents %}
+          <h1>{{page_title}}</h1>
+          
+          {% for post in posts %}
+            <h1>{{post.judul}}</h1>
+            <h2>{{post.body}}</h2>
+            <h2>{{post.category}}</h2>
+          {% endfor %}
+            
+      {% endblock contents %}
     <img id="banner" src="{% static 'blog/img/sunflowers.jpg'%}" alt="">
 
     <div class="card">

@@ -1,3 +1,29 @@
-{% block header%}
+<html lang="en">
 
-{% endblock header%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block page_title %}
+
+        {% endblock page_title %}
+    </title>
+    
+</head>
+
+<body>
+<div id="menu">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="{%url "index" %}" title="">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{%url "form" %}" title="">Form</a></li>
+            <li class="nav-item"><a class="nav-link" href="{%url "blog:index" %}" title="">List Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/blog/create/" title="">Create List Blog</a></li>
+        </ul>
+    </div>
+    {% block contents %}
+
+    {% endblock contents %}
+</body>
+
+</html>

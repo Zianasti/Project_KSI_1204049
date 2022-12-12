@@ -1,0 +1,35 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equip="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{heading}}</title>
+        <!--CSS-->
+        <link rel="stylesheet" href ="{% static 'css/mystyle.css'%}">
+        <!--CSS BOOTSTRAP-->
+        <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+    </head>
+    <body>
+        {% include "snippets/navbar.html"%}
+        <h2 align="center">{{heading}}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <!-- {{classform.nama.label_tag}}
+            {{classform.nama}} -->
+            <table>{{classform.as_table}}</table>
+            <!-- <label for="nama">Nama : </label>
+            <input type="text" name="nama" id="nama">
+            <br>
+            <label for="alamat">Alamat : </label>
+            <input type="text" name="alamat" id="alamat">
+            <br> -->
+            <button type="Submit">Kirim</button>
+        </form>
+
+        <h2>{{nama}}</h2>
+        <h2>{{alamat}}</h2>
+    </body>
+</html>
