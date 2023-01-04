@@ -26,9 +26,9 @@ def index (request) :
     return HttpResponse('Hello World !')
 
 urlpatterns = [
-    url(r'^blog/$', include('blog.urls', namespace = 'blog')),
+    url(r'^blog/', include('blog.urls', namespace = 'blog')),
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls', namespace='blog')),
+    path('blog/', include('blog.urls', namespace='blog1')),
     path ('', views.index, name='index'),
     path('form/', views.form, name='form'),
     path('about/',views.about),

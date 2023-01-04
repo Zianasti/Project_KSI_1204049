@@ -15,8 +15,8 @@ def form(request):
         print("Ini adalah method post")
         context['nama'] = request.POST['nama']
         context['alamat'] = request.POST['alamat']
-        context['namac'] = request.POST['namac']
-        context['alamatc'] = request.POST['alamatc']
+        # context['namac'] = request.POST['namac']
+        # context['alamatc'] = request.POST['alamatc']
     else:
         print("Ini adalah method get")
 

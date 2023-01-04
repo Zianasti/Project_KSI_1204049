@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from.models import Post
@@ -20,15 +20,12 @@ def index(request):
     return render(request, 'blog/index.html',context)
 
 def create(request):
-    post_form = PostForm()
+    post_form = PostForm(request.POST or None)
 
     if request.method == 'POST':
-        PostModel.objects.create(
-            judul = request.POST['title'],
-            body = request.POST['body'],
-            category = request.POST['category'],
-        )
-
+        if post_form.is_valid() :
+            post_form.save()
+        
         return HttpResponseRedirect("/blog/")
 
     context = {
@@ -41,5 +38,28 @@ def create(request):
 def recent(request):
     return HttpResponse("Recent")
 
+def delete(request, delete_id):
+    PostModel.objects.filter(id=delete_id).delete()
+    return HttpResponseRedirect('/blog/')
 
+def update(request, update_id):
+    updt = PostForm.objects.get(id=update_id)
+    data = {
+        'author' : updt.author,
+        'judul' : updt.judul,
+        'body' : updt.body,
+        'category' : updt.category,
+    }
 
+    postform = PostForm(request.Post or None, initial=data, instance=updt)
+
+    if request.method == 'POST':
+        if postform.is_valid():
+            postform.save()
+            return HttpResponseRedirect('/blog/')
+
+    context = {
+        'heading':'Update',
+        'postform' : postform
+    }
+    return render(request, 'form.html', context)
